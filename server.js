@@ -5,7 +5,7 @@ const fs = require("fs");
 // *****/middlewares/*****
 const time = (req, res, next) => {
     var date = new Date();
-    if (1 <= date.getDay() && date.getDay() <= 5 && 9 <= date.getHours() && date.getHours() <= 17)
+    if (date.getDay() >=1 && date.getDay() <= 5 &&  date.getHours() >=9 && date.getHours() <= 17)
         next()
     else
         res.send("<h1>Veuillez retourner penandant les horaires de travail...</h1>");
